@@ -1,10 +1,10 @@
 package root.lib.stack;
 
 public class MyStack {
-	private static Object[] array;
+	private Object[] array;
 	
 	public MyStack() {
-		array = new Object[0];
+		this.array = new Object[0];
 	}
 	
 	
@@ -13,7 +13,7 @@ public class MyStack {
 	}
 	
 	public Object pop() {
-		if (array.length == 0) {
+		if (this.array.length == 0) {
 			return "InvalidOperationException";
 		} else {
 			return arrayMinusMinus();
@@ -21,42 +21,42 @@ public class MyStack {
 	}
 	
 	public void show() {
-		for (Object i : array) {
+		for (Object i : this.array) {
 			System.out.print(i.toString() + " ");
 		}
 		System.out.println();
 	}
 	
 	public Object peek() {
-		if (array.length == 0) {
+		if (this.array.length == 0) {
 			return "InvalidOperationException";
 			
 		} else {
-			return array[array.length - 1];
+			return this.array[this.array.length - 1];
 		}
 	}
 	
 	public int count() {
-		return array.length;
+		return this.array.length;
 	}
 	
 	private void arrayPlusPlus(Object key) {
-		Object[] tmp = new Object[array.length + 1];
+		Object[] tmp = new Object[this.array.length + 1];
 		
-		for (int i = 0; i < array.length; i++) {
-			tmp[i] = array[i];
+		for (int i = 0; i < this.array.length; i++) {
+			tmp[i] = this.array[i];
 		}
 		
 		tmp[tmp.length - 1] = key;
 		
-		array = tmp;
+		this.array = tmp;
 	}
 	
 	private Object arrayMinusMinus() {
-		Object result = array[array.length - 1];
-		Object[] tmp = new Object[array.length - 1];
+		Object result = this.array[this.array.length - 1];
+		Object[] tmp = new Object[this.array.length - 1];
 		for (int i = 0; i < tmp.length; i++) {
-			tmp[i] = array[i];
+			tmp[i] = this.array[i];
 		}
 		
 		array = tmp;
