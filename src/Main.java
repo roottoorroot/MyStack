@@ -9,8 +9,22 @@ public class Main {
 		MyQueue queue = new MyQueue();
 		
 		
-		
-		
+		stack.push(133);
+		stack.push("dsd");
+		stack.push("folow");
+		stack.push("thesun");
+		stack.show();
+		System.out.println(stack.pop().toString());
+		stack.show();
+		stack.pop();
+		stack.show();
+		stack.pop();
+		stack.show();
+		stack.pop();
+		stack.show();
+		stack.pop();
+		stack.show();
+		System.out.println(stack.pop().toString());
 
 		
 	}
